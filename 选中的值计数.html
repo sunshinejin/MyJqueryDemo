@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <input type="checkbox" name="check" checked value = "1">
+  <input type="checkbox" name="check"  value = "2">
+  <input type="checkbox" name="check" checked value = "3">
+  <input type="button" value="你选中的个数" id = "btn">
+
+</body>
+<script src="../public.js"></script>
+<script>
+  var btn = document.getElementById("btn");
+  btn.onclick = function () {
+      var check = [];
+      var checks = document.getElementsByName("check");
+      d(checks);
+      for(var i = 0;i<checks.length;++i){
+          if(checks[i].checked){
+              d(typeof checks[i]);
+              d(checks[i]);
+              check.push(checks[i].value);
+             /* check[i]=check[i].value;*/
+              d(check[i]);
+          }
+
+      }
+      alert(check.length);
+  }
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <!-- <input type="submit" id="animate" style="width:200px;height: 100px; background: darkgreen;display: none"  >
+        1111
+    </input>-->
+    <div  id="panel" style="opacity:0.5;cursor:pointer;width:100px;height: 100px; background: pink;position: relative;left:100px;">
+dd
+    </div>
+</body>
+<script src="../public.js"></script>
+<script type="text/javascript" src="../jquery-1.11.2.js"></script>
+<script>
+   /* $("#animate").toggle(function () {
+        $(this).slideDown(5000);
+    },function () {
+        $(this).slideUp(5000);
+    });*/
+$(function () {
+    $("#panel").click(function () {
+        $(this).animate({left:"500px",height:"200px",opacity:"1"},3000)
+            .animate({top:"200px",width:"200px"},3000)
+            .fadeOut("slow");
+    })
+});
+
+
+</script>
+</html>
